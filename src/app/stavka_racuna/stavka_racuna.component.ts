@@ -16,7 +16,7 @@ import { StavkaRacuna } from './../model/stavka_racuna.model';
 })
 export class StavkaRacunaComponent implements OnInit {
 
-  displayedColumns = ['id', 'redni_broj', 'kolicina', 'jedinica_mere', 'cena', 'racun', 'proizvod', 'actions'];
+  displayedColumns = ['id', 'redniBroj', 'kolicina', 'jedinicaMere', 'cena', 'racun', 'proizvod', 'actions'];
 
   
   dataSource!: MatTableDataSource<StavkaRacuna>;
@@ -64,8 +64,8 @@ export class StavkaRacunaComponent implements OnInit {
       this.dataSource.sortingDataAccessor = (data:any, property) =>{
         switch(property){
           case 'id': return data[property];
-          case 'redni_broj': return data[property];
-          case 'jedinica_mere': return data[property];
+          case 'redniBroj': return data[property];
+          case 'jedinicaMere': return data[property];
           case 'kolicina': return data[property];
           case 'cena': return data[property];
           case 'proizvod': return data.proizvod.naziv.toLocaleLowerCase();
@@ -77,8 +77,8 @@ export class StavkaRacunaComponent implements OnInit {
     });
  }
 
-  public openDialog(flag: number, id: number, redni_broj: number, jedinica_mere: string, kolicina: number,  cena: number, racun: Racun, proizvod: Proizvod) {
-    const dialog = this.dialog.open(StavkaRacunaDialogComponent, {data: {id: id, redni_broj: redni_broj, jedinica_mere: jedinica_mere, kolicina: kolicina,  cena: cena, racun: racun, proizvod: proizvod}});
+  public openDialog(flag: number, id: number, redniBroj: number, jedinicaMere: string, kolicina: number,  cena: number, racun: Racun, proizvod: Proizvod) {
+    const dialog = this.dialog.open(StavkaRacunaDialogComponent, {data: {id: id, redniBroj: redniBroj, jedinicaMere: jedinicaMere, kolicina: kolicina,  cena: cena, racun: racun, proizvod: proizvod}});
     dialog.componentInstance.flag = flag;
     dialog.afterClosed().subscribe(result => {
       if (result === 1) {

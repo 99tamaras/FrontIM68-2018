@@ -17,9 +17,9 @@
         <mat-cell *matCellDef="let row">{{ row.datum | date: "dd.MM.yyyy." }}</mat-cell>
       </ng-container>
   
-      <ng-container matColumnDef="nacin_placanja">
+      <ng-container matColumnDef="nacinPlacanja">
         <mat-header-cell *matHeaderCellDef mat-sort-header>Način plaćanja</mat-header-cell>
-        <mat-cell *matCellDef="let row">{{ row.nacin_placanja }}</mat-cell>
+        <mat-cell *matCellDef="let row">{{ row.nacinPlacanja }}</mat-cell>
       </ng-container>
   
       
@@ -30,10 +30,10 @@
           </button>
         </mat-header-cell>
         <mat-cell *matCellDef="let row">
-          <button mat-icon-button color="primary" (click)="openDialog(2, row.id, row.datum, row.nacin_placanja )">
+          <button mat-icon-button color="primary" (click)="openDialog(2, row.id, row.datum, row.nacinPlacanja )">
             <mat-icon arial label="Edit">edit</mat-icon>
           </button>
-          <button mat-icon-button color="primary" (click)="openDialog(3, row.id, row.datum, row.nacin_placanja)">
+          <button mat-icon-button color="primary" (click)="openDialog(3, row.id, row.datum, row.nacinPlacanja)">
             <mat-icon arial label="Delete">delete</mat-icon>
           </button>
         </mat-cell>

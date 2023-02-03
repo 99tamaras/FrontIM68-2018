@@ -53,7 +53,6 @@ const Routes = [{path: 'proizvod', component: ProizvodComponent},
                 {path: 'home', component: HomeComponent},
                 {path: 'author', component: AuthorComponent},
                 {path: 'about', component: AboutComponent}
-                
               ]; 
 
 @NgModule({

@@ -3,9 +3,9 @@ import { Racun } from './racun.model';
 
 export class StavkaRacuna {
   id!: number;
-  redni_broj!: number;
+  redniBroj!: number;
   kolicina!: number;
-  jedinica_mere!: string;
+  jedinicaMere!: string;
   cena!: number;
   racun!: Racun;
   proizvod!: Proizvod;

@@ -12,9 +12,9 @@
         <mat-cell *matCellDef="let row">{{row.id}}</mat-cell>
       </ng-container>
   
-      <ng-container matColumnDef="redni_broj">
+      <ng-container matColumnDef="redniBroj">
         <mat-header-cell *matHeaderCellDef mat-sort-header>Redni broj</mat-header-cell>
-        <mat-cell *matCellDef="let row">{{row.redni_broj}}</mat-cell>
+        <mat-cell *matCellDef="let row">{{row.redniBroj}}</mat-cell>
       </ng-container>
   
       <ng-container matColumnDef="kolicina">
@@ -22,9 +22,9 @@
         <mat-cell *matCellDef="let row">{{row.kolicina}}</mat-cell>
       </ng-container>
   
-      <ng-container matColumnDef="jedinica_mere">
+      <ng-container matColumnDef="jedinicaMere">
         <mat-header-cell *matHeaderCellDef mat-sort-header>Jedinica mere</mat-header-cell>
-        <mat-cell *matCellDef="let row">{{row.jedinica_mere}}</mat-cell>
+        <mat-cell *matCellDef="let row">{{row.jedinicaMere}}</mat-cell>
       </ng-container>
   
       <ng-container matColumnDef="cena">
@@ -50,10 +50,10 @@
           </button>
         </mat-header-cell>
         <mat-cell *matCellDef="let row">
-          <button mat-icon-button color="primary" (click)="openDialog(2, row.id, row.redni_broj, row.jedinica_mere, row.kolicina,  row.cena, row.racun, row.proizvod)">
+          <button mat-icon-button color="primary" (click)="openDialog(2, row.id, row.redniBroj, row.jedinicaMere, row.kolicina,  row.cena, row.racun, row.proizvod)">
             <mat-icon arial label="Edit">edit</mat-icon>
           </button>
-          <button mat-icon-button color="primary" (click)="openDialog(3, row.id, row.redni_broj, row.jedinica_mere, row.kolicina,  row.cena, row.racun, row.proizvod)">
+          <button mat-icon-button color="primary" (click)="openDialog(3, row.id, row.redniBroj, row.jedinicaMere, row.kolicina,  row.cena, row.racun, row.proizvod)">
             <mat-icon arial label="Delete">delete</mat-icon>
           </button>
         </mat-cell>

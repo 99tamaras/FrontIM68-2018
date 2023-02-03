@@ -15,7 +15,7 @@ import { RacunService } from '../service/racun.service';
 })
 export class RacunComponent implements OnInit {
 
-  displayedColumns = ['id', 'datum', 'nacin_placanja',  'actions'];
+  displayedColumns = ['id', 'datum', 'nacinPlacanja',  'actions'];
 
   today: Date = new Date();
 
@@ -54,8 +54,8 @@ export class RacunComponent implements OnInit {
     });
 }
 
-  public openDialog(flag: number, id: number, datum: Date, nacin_placanja: string) {
-    const dialog = this.dialog.open(RacunDialogComponent, {data: {id: id, datum: datum, nacin_placanja: nacin_placanja}});
+  public openDialog(flag: number, id: number, datum: Date, nacinPlacanja: string) {
+    const dialog = this.dialog.open(RacunDialogComponent, {data: {id: id, datum: datum, nacinPlacanja: nacinPlacanja}});
     dialog.componentInstance.flag = flag;
     dialog.afterClosed().subscribe(result => {
       if (result === 1) {
